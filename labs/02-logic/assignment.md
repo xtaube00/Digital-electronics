@@ -29,7 +29,7 @@
         report "Stimulus process started" severity note;
 
         -- First test case
-        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx96
+        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "1001" if ID = xxxx96
         s_a <= "BCD_OF_YOUR_LAST_ID_DIGIT";        -- Such as "0110" if ID = xxxx96
         wait for 100 ns;
         -- Expected output
