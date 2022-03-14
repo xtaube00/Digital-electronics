@@ -92,10 +92,16 @@
    ```vhdl
    --------------------------------------------------------------------
    -- Experiments on your own: LED(7:4) indicators
+   LED4 : process (SW)
+            begin
+                if (SW = "0000") then
+                    LED(4) <= '1';
+                else
+                    LED(4) <= '0';
+                end if;
+            end process LED4;
 
-   -- Turn LED(4) on if input value is equal to 0, ie "0000"
-   -- LED(4) <= `0` when WRITE YOUR CODE HERE
-
+   
    -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
    -- LED(5) <= WRITE YOUR CODE HERE
 
