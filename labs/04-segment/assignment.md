@@ -146,7 +146,7 @@ begin
             end process LED5;
 
    LED6 : process (SW)  --LED6 svítí, pokud vstupní hodnota je lichá, tzn. pokud je na vstupní nulté pozici 1, je hodnota určitě lichá 
-                         (např.: "000[1]", "111[1]", "101[1]", atd.)
+                         --(např.: "000[1]", "111[1]", "101[1]", atd.)
             begin
                 if (SW(0) = '1') then
                     LED(6) <= '1';
