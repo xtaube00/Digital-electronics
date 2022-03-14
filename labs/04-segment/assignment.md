@@ -126,7 +126,7 @@ begin
     -- Display input value on LEDs
     LED(3 downto 0) <= SW; -- na 4 switche prijdou 4 ledkz
   -- Experiments on your own: LED(7:4) indicators
-   LED4 : process (SW)   -LED4 svítí, pokud je vstupní hodnota rovna "0000"
+   LED4 : process (SW)   --LED4 svítí, pokud je vstupní hodnota rovna "0000"
             begin
                 if (SW = "0000") then  
                     LED(4) <= '1';
@@ -136,7 +136,7 @@ begin
             end process LED4;
 
    
-   LED5 : process (SW)  -LED5 svítí pokud je vstupní hodnota větší než "1001"
+   LED5 : process (SW)  --LED5 svítí pokud je vstupní hodnota větší než "1001"
             begin
                 if (SW < b"1001") then
                     LED(5) <= '0';
@@ -145,7 +145,7 @@ begin
                 end if;
             end process LED5;
 
-   LED6 : process (SW)  -LED6 svítí, pokud vstupní hodnota je lichá, tzn. pokud je na vstupní nulté pozici 1, je hodnota určitě lichá 
+   LED6 : process (SW)  --LED6 svítí, pokud vstupní hodnota je lichá, tzn. pokud je na vstupní nulté pozici 1, je hodnota určitě lichá 
                          (např.: "000[1]", "111[1]", "101[1]", atd.)
             begin
                 if (SW(0) = '1') then
@@ -155,7 +155,7 @@ begin
                 end if;
             end process LED6;
 
-   LED7 : process (SW)    -LED7 sviti, pokud je vtupní hodnota mocnina dvou (1, 2, 4, a 8)
+   LED7 : process (SW)    --LED7 sviti, pokud je vtupní hodnota mocnina dvou (1, 2, 4, a 8)
             begin            
                 case SW is
                     when "0001" =>
