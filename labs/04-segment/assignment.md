@@ -158,15 +158,15 @@ begin
             begin            
                 case SW is
                     when "0001" =>
-                    LED(7) <= '0';
-                    when "0010" =>
-                    LED(7) <= '0';
-                    when "0100" =>
-                    LED(7) <= '0';
-                    when "1000" =>
-                    LED(7) <= '0';
-                    when others =>
                     LED(7) <= '1';
+                    when "0010" =>
+                    LED(7) <= '1';
+                    when "0100" =>
+                    LED(7) <= '1';
+                    when "1000" =>
+                    LED(7) <= '1';
+                    when others =>
+                    LED(7) <= '0';
             end case;
             end process LED7;
 
