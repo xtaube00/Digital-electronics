@@ -91,7 +91,41 @@
 
 ```vhdl
    --------------------------------------------------------------------
-   -- Experiments on your own: LED(7:4) indicators
+  entity top is
+    Port ( SW  : in STD_LOGIC_VECTOR (3 downto 0);
+           LED : out STD_LOGIC_VECTOR (7 downto 0);
+           CA  : out STD_LOGIC;
+           CB  : out STD_LOGIC;
+           CC  : out STD_LOGIC;
+           CD  : out STD_LOGIC;
+           CE  : out STD_LOGIC;
+           CF  : out STD_LOGIC;
+           CG  : out STD_LOGIC;
+           AN  : out STD_LOGIC_VECTOR (7 downto 0));
+end top;
+
+architecture Behavioral of top is
+begin
+    --------------------------------------------------------------------
+    -- Instance (copy) of hex_7seg entity
+    hex2seg : entity work.hex_7seg
+        port map(
+            hex_i    => SW,  -- zapojeni podle obrazku top
+            seg_o(6) => CA,
+            seg_o(5) => CB,
+            seg_o(4) => CC,
+            seg_o(3) => CD,
+            seg_o(2) => CE,
+            seg_o(1) => CF,
+            seg_o(0) => CG
+        );
+
+    -- Connect one common anode to 3.3V
+    AN <= b"1111_0111"; -- vybiram display
+
+    -- Display input value on LEDs
+    LED(3 downto 0) <= SW; -- na 4 switche prijdou 4 ledkz
+  -- Experiments on your own: LED(7:4) indicators
    LED4 : process (SW)
             begin
                 if (SW = "0000") then
