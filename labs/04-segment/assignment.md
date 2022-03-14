@@ -102,8 +102,14 @@
             end process LED4;
 
    
-   -- Turn LED(5) on if input value is greater than "1001", ie 10, 11, 12, ...
-   -- LED(5) <= WRITE YOUR CODE HERE
+   LED5 : process (SW)
+            begin
+                if (SW < b"1001") then
+                    LED(5) <= '0';
+                else
+                    LED(5) <= '1';
+                end if;
+            end process LED5;
 
    -- Turn LED(6) on if input value is odd, ie 1, 3, 5, ...
    -- LED(6) <= WRITE YOUR CODE HERE
