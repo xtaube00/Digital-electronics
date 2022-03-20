@@ -21,7 +21,6 @@ begin
     p_t_ff_rst : process(clk)
     begin
         if rising_edge(clk) then
-        -- WRITE YOUR CODE HERE
 
            if(rst = '1')then
               s_q <= '0';
