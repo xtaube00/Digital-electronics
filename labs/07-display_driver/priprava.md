@@ -1,4 +1,4 @@
-            ## Preparation tasks (done before the lab at home)
+   ## DU-JAKUB TAUBER
 
 A common way to control multiple displays is to gradually switch between them. We control (connect to supply voltage) only one of the displays at a time, as can be seen [here](https://engineeringtutorial.com/seven-segment-display-working-principle/).
 
